@@ -57,7 +57,7 @@ PostgreSQL can natively make some partitions of your data. This case should only
     when we query on these data by group of economic region. Basically it is easy to imagine 
     that a short table for Europe, North America, Region of China can reduce the data processed 
     where you query one region.
-    
+    ```sql
     CREATE TABLE people (
         id         long not null,
         name       string not null,
@@ -68,7 +68,7 @@ PostgreSQL can natively make some partitions of your data. This case should only
     CREATE TABLE people_eu 
         PARTITION OF people
         FOR VALUES IN ('FR', 'ES', 'IT', 'DE', 'NL' , ...., 'PL');
-    
+    ```
 For further information, please read the [official documentation](https://www.postgresql.org/docs/current/ddl-partitioning.html)
 
 ## Administration tasks
