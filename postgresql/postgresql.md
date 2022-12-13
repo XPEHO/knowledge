@@ -18,9 +18,9 @@ PostgreSQL is an Open Source [RDBMS](https://en.wikipedia.org/wiki/Relational_da
 ### Server configuration
 The config files are in */data* folder
 
-  **postgresql.conf**: contains server configuration
-  **pg_ident.conf**: is the configuration between system user and database user
-  **pg_hba.conf**: is the client network management file
+  * **postgresql.conf**: contains server configuration
+  * **pg_ident.conf**: is the configuration between system user and database user
+  * **pg_hba.conf**: is the client network management file
 
 ### File System organization
 PostgreSQL have 
