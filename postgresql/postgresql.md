@@ -39,11 +39,11 @@ PostgreSQL have
 When you design your database, each primary key and foreign key have an automatic index. But in som cases, you nedd to add another ones for performance.
 
     By example, we need to query with a WHERE clause on two columns (begin_date and end_date) but this query is slow.
-    
+    ```sql
     CREATE INDEX idx_people 
         ON people(begin_date, end_date) 
         USING BTREE;
-    
+    ```
 PostgreSQL provides many types of index algorithm, BTREE is the most common but you can please read the [official documentation](https://www.postgresql.org/docs/current/indexes-types.html) for further information.
 
     
