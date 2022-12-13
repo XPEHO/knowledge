@@ -32,7 +32,7 @@ Find here all the documentation about the different tools and technologies used.
 |🚧 |React| - | <img alt="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" height="50" /> |
 |🚧 |Angular| - | <img alt="logo" src="https://angular.io/assets/images/logos/angular/angular.svg" height="50" /> |
 |Database|
-|🚧 |PostgreSQL|[PostgreSQL.md](/postgresql/postgresql.md)| - | <img alt="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/233px-Postgresql_elephant.svg.png" height="50" /> |
+|🚧 |PostgreSQL|[PostgreSQL.md](/postgresql/postgresql.md)| <img alt="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/233px-Postgresql_elephant.svg.png" height="50" /> |
 |🚧 |MySQL| - | <img alt="logo" src="https://upload.wikimedia.org/wikipedia/fr/thumb/6/62/MySQL.svg/1200px-MySQL.svg.png" height="50" /> |
 |🚧 |MongoDB| - | <img alt="logo" src="https://upload.wikimedia.org/wikipedia/fr/thumb/4/45/MongoDB-Logo.svg/langfr-220px-MongoDB-Logo.svg.png" height="50" /> |
 |Containerisation|
