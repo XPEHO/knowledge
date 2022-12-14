@@ -39,6 +39,7 @@ PostgreSQL have
 When you design your database, each primary key and foreign key have an automatic index. But in som cases, you nedd to add another ones for performance.
 
     By example, we need to query with a WHERE clause on two columns (begin_date and end_date) but this query is slow.
+
 ```sql
 CREATE INDEX idx_people 
     ON people(begin_date, end_date) 
@@ -58,6 +59,7 @@ PostgreSQL can natively make some partitions of your data. This case should only
     when we query on these data by group of economic region. Basically it is easy to imagine 
     that a short table for Europe, North America, Region of China can reduce the data processed 
     where you query one region.
+
 ```sql
 CREATE TABLE people (
     id         long not null,
