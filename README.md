@@ -21,6 +21,7 @@ Find here all the documentation about the different tools and technologies used.
 |🚧 |Java| - | <img alt="logo" src="https://upload.wikimedia.org/wikipedia/fr/thumb/2/2e/Java_Logo.svg/1200px-Java_Logo.svg.png" height="50" /> |
 |🚧 |Kotlin| - | <img alt="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Kotlin_logo_2021.svg/131px-Kotlin_logo_2021.svg.png" height="50" /> |
 |🚧 |Swift| - | <img alt="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Swift_logo.svg/1200px-Swift_logo.svg.png" height="50" /> |
+|🚧 |SQL|[SQL.md](/sql/sql.md)| <img alt="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Sql_data_base_with_logo.png/320px-Sql_data_base_with_logo.png" height="50" /> |
 |Toolkits|
 |✅ |Flutter| [Flutter.md](/flutter/flutter.md) | <img alt="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Google-flutter-logo.png/1200px-Google-flutter-logo.png" height="50" /> |
 |🚧 |Android| - | <img alt="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/1200px-Android_robot.svg.png" height="50" /> |
