@@ -1,0 +1,1 @@
+magick convert -size 300x200 xc:white -fill none  -stroke black  -draw "circle 100,100 10,100" -pointsize 30 -annotate +10+40 A -draw "circle 200,100 290,100" -annotate +270+40 B  circle.gif
