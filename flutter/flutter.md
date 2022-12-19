@@ -2,7 +2,7 @@
 
 <img alt="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Google-flutter-logo.png/1200px-Google-flutter-logo.png" height="100" />
 
-<img alt="flutter" src="../images/flutter.png" height="30%" />
+<img alt="flutter" src="images/flutter.png" height="30%" />
 
 Flutter is Google's mobile UI framework for crafting high-quality native interfaces on iOS, Android, Web, Windows, Linux and Mac. 
 
