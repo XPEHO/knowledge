@@ -185,11 +185,33 @@ var cars = ["Saab", "Volvo", "BMW"];
 
 Operators are used to assign values, compare values, perform arithmetic operations, and more.
 
-```javascript
-var x = 5;
-var y = 2;
-var z = x + y; // z = 7
-```
+| Operator | Description | Example |
+| --- | --- | --- |
+| = | Assigns values | x = y |
+| == | Compares values (without type conversion) | x == y |
+| === | Compares values (with type conversion) | x === y |
+| != | Compares values (without type conversion) | x != y |
+| !== | Compares values (with type conversion) | x !== y |
+| > | Greater than | x > y |
+| < | Less than | x < y |
+| >= | Greater than or equal to | x >= y |
+| <= | Less than or equal to | x <= y |
+| + | Addition | x + y |
+| - | Subtraction | x - y |
+| * | Multiplication | x * y |
+| / | Division | x / y |
+| % | Modulus | x % y |
+| ++ | Increment | x++ |
+| -- | Decrement | x-- |
+| += | Addition assignment | x += y |
+| -= | Subtraction assignment | x -= y |
+| *= | Multiplication assignment | x *= y |
+| /= | Division assignment | x /= y |
+| %= | Modulus assignment | x %= y |
+| && | Logical and | x && y |
+| \|\| | Logical or | x \|\| y |
+| ! | Logical not | !x |
+| ? : | Ternary operator | x ? y : z |
 
 > Hint
 >
