@@ -50,3 +50,8 @@ console.log(!false); // true
 // == vs ===
 console.log(1 == "1"); // true
 console.log(1 === "1"); // false
+
+// ternary operator (condition ? true : false)
+var enoyJavascript = true;
+var message = enoyJavascript ? "I love JavaScript" : "I hate JavaScript";
+console.log(message); // I love JavaScript
