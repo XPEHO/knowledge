@@ -15,7 +15,7 @@ Find here all the documentation about the different tools and technologies used.
 |🚧 |Gitlab| - | <img alt="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/GitLab_logo.svg/langfr-310px-GitLab_logo.svg.png" height="50" /> |
 |🚧 |Bitbucket| - | <img alt="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Bitbucket-Logo-blue.svg/2560px-Bitbucket-Logo-blue.svg.png" height="50" /> |
 |Languages|
-|🚧 |Javascript| - | <img alt="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" height="50" /> |
+|✅|Javascript| [Javascript.md](javascript/javascript.md) | <img alt="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" height="50" /> |
 |🚧 |Typescript| - | <img alt="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png" height="50" /> |
 |🚧 |Dart| - | <img alt="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Dart-logo.png/1200px-Dart-logo.png" height="50" /> |
 |🚧 |Java| - | <img alt="logo" src="https://upload.wikimedia.org/wikipedia/fr/thumb/2/2e/Java_Logo.svg/1200px-Java_Logo.svg.png" height="50" /> |
