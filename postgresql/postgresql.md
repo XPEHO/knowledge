@@ -50,7 +50,33 @@ PostgreSQL provides many types of index algorithm, BTREE is the most common but 
 
     
 ### Execution plan
- *coming soon*
+The  __execution plan__  also called  __explain plan__  is the analysis of your query by the RDBMS engine. This analysis permits you to optimize your query or indexes on your table to reduce the codst of duration or memory.
+ 
+```sql
+EXPLAIN
+  select distinct t.bureference from (
+    SELECT distinct bureference FROM public.product_ldd where bucode='1'
+     UNION
+    select productreference from public.product_store where  productreference like '%00%' 
+     UNION
+    SELECT  productreference as bureference FROM public.product_facility_info 
+      where deliveryeligibility=true 
+           and facilityid in ('001-WAREHOUSE-357','001-WAREHOUSE-359','001-WAREHOUSE-433','001-WAREHOUSE-446','001-WAREHOUSE-447','001-WAREHOUSE-460','001-WAREHOUSE-472','001-WAREHOUSE-483','001-WAREHOUSE-462')
+  ) t 
+  order by t.bureference
+```
+
+Graphical results
+
+<img alt="explain plan" src="./img/explain_plan.png" height="40%" />
+
+Analysisresults
+
+<img alt="explain plan text" src="./img/explain_plan_analytic.png" height="80%" />
+
+Text results
+
+<img alt="explain plan text" src="./img/explain_plan_text.png" height="100%" />
 
 ### Partitioning
 PostgreSQL can natively make some partitions of your data. This case should only be used when a very massive table is present to scale the performance.
@@ -75,8 +101,55 @@ CREATE TABLE people_eu
 
 For further information, please read the [official documentation](https://www.postgresql.org/docs/current/ddl-partitioning.html)
 
+## Bulk load/dump
+### loading from CSV file
+
+This method is the better way to load huge amount of data from a flat file.
+
+```sql
+COPY YOUR_TABLE FROM '/thePath/theCsvFileWithoutHeader.csv' WITH (FORMAT csv);
+```
+
+### dump to CSV file
+
+This method is the better way to dump huge data volume into a flat file.
+
+```sql
+copy (
+  select distinct t.productreference, t.contextcode, w.transport_type, typ from (
+    select productreference, storeid as contextcode, 'STORE' as typ 
+      FROM public.product_store 
+    UNION
+    SELECT  productreference, facilityid as contextcode, 'WAREHOUSE' as typ 
+      FROM public.product_warehouse
+      WHERE deliveryeligibility=true
+  ) as t left join wtt w on t.productreference=w.product_reference
+  order by t.productreference, t.contextcode
+) to '/thePath/gtin_regional' csv;
+```
+
 ## Administration tasks
+
+The administration commands are run directly in a console on the database server.
+
+
+### Optimization
+
+In PostgreSQL, the  __vacuum__  process is the cleaning the old parts of indexes where the data have been modified, deleted, the  __reindex__  is the process that rebuild clean indexes
+
+```sh
+  vacuumdb  -U postgres YOUR_DB
+  reindexdb  -U postgres YOUR_DB
+```
+  
 ### Backup
- *coming soon*
+
+```sh
+ pg_dump -U postgres -b -Fc -o -v -f YOUR_DB.dump YOUR_DB
+```
+
 ### Restore
- *coming soon*
+
+```sh
+ pg_restore -U postgres -v -Fc -O -d YOUR_DB YOUR_DB.dump
+```

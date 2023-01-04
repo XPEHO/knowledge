@@ -5,6 +5,8 @@
 
 ## Transaction
 Transaction is a statement to control process and data manipulation and permit to validate or invalidate the data processing.
+The acceptance of the transaction is a  __commit__  and the reject of the transation is a  __rollback__ .
+The best practice is to not use  __autocommit__ .
 
 
 ## SELECT
@@ -106,17 +108,30 @@ Transaction is a statement to control process and data manipulation and permit t
 
 
 ## GROUPING
+The use some aggregate function like: avg, count, min, max, ...  you have to use grouping
+
+```sql
     GROUP BY
+```
     
 ## CONDITION IN GROUP
+To add a condition on grouped data
+
+```sql
     HAVING
+```
 
 ## RANKING
+
+```sql
     RANK OVER ... PARTITION BY
+```
     
     
     
 ## TRUNCATE
+The truncate command erase all the content of a table and it shoudn't be rollbacked.
+
 ```sql
   TRUNCATE TABLE tableName
 ```
