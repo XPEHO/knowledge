@@ -5,6 +5,8 @@
 
 ## Transaction
 Transaction is a statement to control process and data manipulation and permit to validate or invalidate the data processing.
+The acceptance of the transaction is a  __commit__  and the reject of the transation is a  __rollback__ .
+The best practice is to not use  __autocommit__ .
 
 
 ## SELECT
@@ -106,20 +108,60 @@ Transaction is a statement to control process and data manipulation and permit t
 
 
 ## GROUPING
+The use some aggregate function like: avg, count, min, max, ...  you have to use grouping
+
+```sql
     GROUP BY
+```
     
 ## CONDITION IN GROUP
+To add a condition on grouped data
+
+```sql
     HAVING
+```
 
 ## RANKING
+
+```sql
     RANK OVER ... PARTITION BY
+```
     
     
     
 ## TRUNCATE
+The truncate command erase all the content of a table and it shoudn't be rollbacked.
+
 ```sql
   TRUNCATE TABLE tableName
 ```
+
+## WITH
+The WITH instruction is used to split complex business request to have a easier and most readable request.
+```sql
+
+  -- this query permits to set in a same row, the current and the previous stock (lag function)
+  with update_diff as (
+   SELECT 
+    sku, avail_stock, update_date,
+    -- stock from the previous row
+    lag(avail_stock) over(partition by sku order by  sku, updatedDate)  as prev_stock
+
+   FROM T_STORE
+
+   ORDER BY  
+   -- order is mandatory to apply "lag" function (SQL-2022 standard)
+    sku, updatedDate
+  )
+
+  -- sample request implements a basic count for sku that the stock had evolve
+  SELECT count(*)
+  FROM
+     update_diff
+  WHERE 
+    avail_stock <> prev_stock
+```
+
 
 
 ## Functions
