@@ -25,12 +25,12 @@ The best practice is to not use  __autocommit__ .
 | <=           | inferior or equal                                                   | age <= 18                             |
 | IN           | is in a list of                                                     | firstname IN ('Charles', 'Elisabeth') |
 | BETWEEN      | is between two values                                               | age BETWEEN 13 and 19                 |
-| LIKE         | is like something<br>% replace many letters<br>? replace one letter | fistname LIKE '%sab?th'               |
+| LIKE         | is like something<br><i>% replace many letters<br>? replace one letter</i> | fistname LIKE '%sab?th'               |
 | IS NULL      | is null                                                             | firstname IS NULL                     |
 | IS NOT NULL  | is nul null                                                         | firstname IS NOT NULL                 |
 
 
-##  Logic Operators (also named boolean operators)
+##  Logic Operators (also named Boolean Operators)
 
 | **Operator** |               **Description**              | **Exemple**                    |
 |:------------:|:------------------------------------------:|--------------------------------|
@@ -42,9 +42,11 @@ The best practice is to not use  __autocommit__ .
 | XOR          | boolean Exclusive OR<br>**doesn't exists** | (a AND NOT b) OR (b AND NOT a) |
 
 
-[ More information about Boolean Algebra](../boolean_algebra.md)
+[ More information about Boolean Algebra](./boolean_algebra.md)
 
 ## SELECT
+
+The **SELECT** instruction performs to get information from the database.
 
 ```sql
   SELECT T.column0, T.column1, ..., T.columnN FROM tableName T
@@ -52,6 +54,7 @@ The best practice is to not use  __autocommit__ .
 
 ## CONDITION
 
+The **WHERE** instruction performs add some <ins>conditions</ins> to **SELECT** some information from the database.
 
 ```sql
   SELECT T.column0, T.column1, ..., T.columnN FROM tableName T
@@ -60,12 +63,18 @@ The best practice is to not use  __autocommit__ .
 
 ## INSERT
 
+The **INSERT** instruction performs adds data in the database.
+
+
 ```sql
   INSERT INTO tableName(column0, T.column1, ..., T.columnN)
     VALUES ('data0', 'data1', ..., 'dataN')
 ```
 
 ## UPDATE
+
+The **UPDATE** instruction performs modify data in the database.
+
 ```sql
   UPDATE tableName
     SET column1='data1', ..., columnN='dataN'
@@ -73,6 +82,10 @@ The best practice is to not use  __autocommit__ .
 ```
 
 ## DELETE
+
+The **DELETE** instruction performs remove data in the database.
+
+
 ```sql
   DELETE FROM tableName
     WHERE column0='data0'
@@ -80,7 +93,16 @@ The best practice is to not use  __autocommit__ .
 
 ## MERGE
 
+The **MERGE** instruction performs a massive insert or update operation very fastly in opposition to the amount of data that will be processed.
+
+
+
 ## JOINS
+
+
+The **JOINs** instructions performs to associate different tables of the database. T here are many joins that shoud be seen like mathematic assembly.
+
+
 ### INNER JOIN
 ```sql
   SELECT A.*, B.* FROM tableA A
@@ -143,25 +165,41 @@ The best practice is to not use  __autocommit__ .
 
 
 ## GROUPING
-The use some aggregate function like: avg, count, min, max, ...  you have to use grouping
+
+The **GROUP BY** instruction performs to use some aggregate function like: avg, count, min, max, ...  you have to use grouping.
+
+Here we count the number of person with the sage age.
 
 ```sql
-    GROUP BY
+    SELECT age, count(userId)
+    FROM t_user
+    GROUP BY age
 ```
     
 ## CONDITION IN GROUP
 To add a condition on grouped data
 
 ```sql
-    HAVING
+    SELECT age, count(userId) as nbPerson
+    FROM t_user
+    GROUP BY age
+    HAVING age >= 18
 ```
 
 ## RANKING
 
+The **RANK OVER ... PARTITION BY** instruction performs to add another processing in the same query.
+
+Here we compute the rank of personne with the sage age (maximun first).
+
 ```sql
-    RANK OVER ... PARTITION BY
+    SELECT age, count(userId),
+         RANK() OVER (
+         PARTITION BY age
+          ORDER BY count(userId) DESC) AS age_rank
+    FROM t_user
+    GROUP BY age
 ```
-    
     
     
 ## TRUNCATE
