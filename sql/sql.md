@@ -2,12 +2,47 @@
  *writing in progress*
  
 ## Brief history
+Structured Query Language is a programming language useful in handling structured data and is a standard of ANSI since 1986.
+Please read the [Wikipedia](https://en.wikipedia.org/wiki/SQL) page for further information.
+
 
 ## Transaction
 Transaction is a statement to control process and data manipulation and permit to validate or invalidate the data processing.
 The acceptance of the transaction is a  __commit__  and the reject of the transation is a  __rollback__ .
 The best practice is to not use  __autocommit__ .
 
+
+##  Comparission Operators
+
+| **Operator** |                           **Description**                           | **Exemple**                           |
+|:-------------|:--------------------------------------------------------------------|---------------------------------------|
+| =            | equal                                                               | name = 'my name'                      |
+| <>           | not equal                                                           | name <> 'my name'                     |
+| !=           | not equal                                                           | name != 'my name'                     |
+| >            | superior                                                            | age > 18                              |
+| >=           | superior or equal                                                   | age >= 18                             |
+| <            | inferior                                                            | age < 18                              |
+| <=           | inferior or equal                                                   | age <= 18                             |
+| IN           | is in a list of                                                     | firstname IN ('Charles', 'Elisabeth') |
+| BETWEEN      | is between two values                                               | age BETWEEN 13 and 19                 |
+| LIKE         | is like something<br>% replace many letters<br>? replace one letter | fistname LIKE '%sab?th'               |
+| IS NULL      | is null                                                             | firstname IS NULL                     |
+| IS NOT NULL  | is nul null                                                         | firstname IS NOT NULL                 |
+
+
+##  Logic Operators (also named boolean operators)
+
+| **Operator** |               **Description**              | **Exemple**                    |
+|:------------:|:------------------------------------------:|--------------------------------|
+| NOT          | boolean NOT                                | NOT a                          |
+| OR           | boolean OR                                 | a OR b                         |
+| NOT OR       | boolean NOT OR                             | NOT a OR b                     |
+| AND          | boolean AND                                | a AND b                        |
+| NOT AND      | boolean NOT AND                            | NOT a AND b                    |
+| XOR          | boolean Exclusive OR<br>**doesn't exists** | (a AND NOT b) OR (b AND NOT a) |
+
+
+[ More information about Boolean Algebra](../boolean_algebra.md)
 
 ## SELECT
 
