@@ -49,3 +49,5 @@ Find here all the documentation about the different tools and technologies used.
 |CI/CD|
 |🚧 |Github actions| - | <img alt="logo" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" height="50"> |
 |🚧 |Gitlab CI| - | <img alt="logo" src="https://about.gitlab.com/images/press/logo/png/gitlab-icon-rgb.png" height="50"> |
+|Static code analysis|
+|✅ |SonarQube| [Sonarqube.md](/sonarqube/sonarqube.md) | <img alt="logo" src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Sonarqube_logo.png" height="50"> |
